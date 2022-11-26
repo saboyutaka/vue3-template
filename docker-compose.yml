@@ -1,0 +1,10 @@
+version: "3"
+services:
+  node:
+    image: node:18-bullseye
+    working_dir: /workspace
+    volumes:
+      - .:/workspace:cached
+    ports:
+      - 5173:5173
+    command: "bash -c 'npm install && npm run dev'"
